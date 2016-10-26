@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-beta1-1013",
+  "version": "1.0.0-beta1-1026",
 
   "dependencies": {
     "Microsoft.Extensions.DependencyInjection": "1.0.0"

@@ -6,10 +6,10 @@ namespace AspectCore.Lite.DependencyInjection
 {
     internal class ProxyActivatorWrapper : IProxyActivator
     {
-        private readonly IServiceProviderWrapper serviceProvider;
+        private readonly IServiceProvider serviceProvider;
         private readonly IProxyActivator proxyActivator;
 
-        public ProxyActivatorWrapper(IServiceProviderWrapper serviceProvider)
+        public ProxyActivatorWrapper(IServiceProvider serviceProvider)
         {
             this.serviceProvider = serviceProvider;
             this.proxyActivator = new ProxyActivator(serviceProvider);
