@@ -1,10 +1,9 @@
 {
-  "version": "1.0.0-beta1-1026",
-
+  "authors": [ "liuhaoyang" ],
   "dependencies": {
     "Microsoft.Extensions.DependencyInjection": "1.0.0"
   },
-
+  "description": "AspectCore Lite is an lightweight aop lib for Asp.Net Core framework.",
   "frameworks": {
     "netstandard1.6": {
       "dependencies": {
@@ -24,5 +23,17 @@
         "System.Runtime": "4.0.10"
       }
     }
-  }
+  },
+  "packOptions": {
+    "owners": [ "liuhaoyang" ],
+    "licenseUrl": "https://mit-license.org/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/AspectCore/Lite"
+    },
+    "tags": ["DynamicProxy","Aop","AspNetCore"],
+    "releaseNotes": "The basic realization of the interceptor system."
+  },
+  "title": "AspectCore Lite",
+  "version": "1.0.0-beta1-1027"
 }
