@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Xunit;
 using Microsoft.Extensions.DependencyInjection;
 using AspectCore.Lite.Abstractions;
-using System.Reflection;
+#if NETCOREAPP1_0
 using Microsoft.AspNetCore.Testing;
+#endif
 
 namespace AspectCore.Lite.Test
 {
@@ -31,7 +29,7 @@ namespace AspectCore.Lite.Test
             method = namedMethodMatcher.Match(typeof(INamedMethodMatcherTestService), "Func", "test", new object());
             Assert.Equal(method, MethodHelper.GetMethodInfo<Action<INamedMethodMatcherTestService, string, object>>((s, n, obj) => s.Func(n, obj)));
         }
-
+#if NETCOREAPP1_0
         [Fact]
         public void Match_ThrowsInvalidOperationExceptionException()
         {
@@ -42,7 +40,7 @@ namespace AspectCore.Lite.Test
             },
             $"A suitable method for type '{typeof(INamedMethodMatcherTestService)}' could not be located. Ensure the type is concrete and services are registered for all parameters of a public method.");
         }
-
+#endif
         public interface INamedMethodMatcherTestService
         {
             void Func();
